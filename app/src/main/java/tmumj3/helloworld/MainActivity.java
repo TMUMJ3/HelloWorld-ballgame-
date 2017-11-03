@@ -55,10 +55,10 @@ public class MainActivity extends Activity implements Runnable, SensorEventListe
     }
     @Override
     public void run() {
-        ball.vx += (float) (-gx * time / 1000);
-        ball.vy += (float) (gy * time / 1000);
-        ball.x += dpi * ball.vx * time / 25.4;
-        ball.y += dpi * ball.vy * time / 25.4;
+        ball.vx += (float) (-gx * time / 1000 /10);
+        ball.vy += (float) (gy * time / 1000 /10);
+        ball.x += dpi * ball.vx * time / 25.4 ;
+        ball.y += dpi * ball.vy * time / 25.4 ;
 
         if (ball.x <= ball.radius) {
             ball.x = ball.radius;
